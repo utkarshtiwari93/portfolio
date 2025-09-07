@@ -97,7 +97,7 @@ const form = document.querySelector('.contact-form');
 if (form) {
 	form.addEventListener('submit', function(e) {
 		e.preventDefault();
-		alert('Thank you for reaching out! (Demo only)');
+		alert('This service is currently unavailable. Please reach out via email , LinkedIn or whatsapp.');
 		form.reset();
 	});
 }
