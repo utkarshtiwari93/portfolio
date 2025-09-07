@@ -1,0 +1,424 @@
+.resume-btn {
+	padding: 0.4rem 1.1rem;
+	background: #00e6e6;
+	color: #181818 !important;
+	border-radius: 20px;
+	font-weight: 600;
+	font-size: 1rem;
+	margin-left: 0.7rem;
+	transition: background 0.2s, color 0.2s;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+.resume-btn:hover {
+	background: #fff;
+	color: #00e6e6 !important;
+}
+/* Resume download section */
+.resume-section {
+	position: fixed;
+	top: 24px;
+	right: 24px;
+	width: 260px;
+	z-index: 1002;
+	padding: 1.1rem 1rem 1.2rem 1rem;
+	background: #232526cc;
+	border-radius: 18px;
+	box-shadow: 0 2px 16px rgba(0,230,230,0.18);
+	text-align: center;
+	transition: box-shadow 0.2s;
+}
+.resume-section:hover {
+	box-shadow: 0 6px 32px #00e6e6;
+}
+.resume-section h2 {
+	color: #00e6e6;
+	margin-bottom: 1.2rem;
+}
+.resume-download .btn {
+	font-size: 1.1rem;
+	padding: 0.7rem 2rem;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.7rem;
+}
+/* Certifications section */
+.certifications-section {
+	max-width: 900px;
+	margin: 3rem auto 0 auto;
+	padding: 2rem;
+	background: #232526cc;
+	border-radius: 18px;
+	box-shadow: 0 2px 16px rgba(0,230,230,0.08);
+}
+.certifications-section h2 {
+	text-align: center;
+	color: #00e6e6;
+	margin-bottom: 2rem;
+}
+.cert-list {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+.cert-item {
+	display: flex;
+	align-items: flex-start;
+	gap: 1.5rem;
+	background: #181818cc;
+	border-radius: 12px;
+	padding: 1.2rem 1.5rem;
+	box-shadow: 0 2px 8px rgba(0,230,230,0.04);
+}
+.cert-item ul {
+	margin: 0.5rem 0 0 1.2rem;
+	padding: 0;
+	list-style: disc;
+	color: #00e6e6;
+}
+.cert-date {
+	color: #aaa;
+	font-size: 0.95rem;
+}
+/* LeetCode badge section */
+.leetcode-section {
+	max-width: 700px;
+	margin: 2.5rem auto 0 auto;
+	padding: 1.5rem 2rem;
+	background: #232526cc;
+	border-radius: 18px;
+	box-shadow: 0 2px 16px rgba(248,159,27,0.08);
+	display: flex;
+	justify-content: center;
+}
+.leetcode-badge {
+	display: flex;
+	align-items: center;
+	gap: 1.5rem;
+}
+.leetcode-badge h2 {
+	color: #f89f1b;
+	margin-bottom: 0.3rem;
+}
+.leetcode-badge p {
+	font-size: 1.1rem;
+}
+.leetcode-badge a {
+	color: #f89f1b;
+	text-decoration: underline;
+}
+/* Reset and base styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Segoe UI', Arial, sans-serif;
+	color: #f5f5f5;
+	line-height: 1.6;
+	min-height: 100vh;
+	position: relative;
+	overflow-x: hidden;
+}
+
+#bg-canvas {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 0;
+	pointer-events: none;
+	background: linear-gradient(120deg, #232526 0%, #414345 100%);
+}
+
+header, main, section, footer {
+	position: relative;
+	z-index: 1;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+header {
+	background: #222;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+	position: sticky;
+	top: 0;
+	z-index: 100;
+}
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 1.2rem 2rem;
+}
+.logo {
+	font-size: 2rem;
+	font-weight: bold;
+	color: #00e6e6;
+	letter-spacing: 2px;
+	display: flex;
+	align-items: center;
+}
+
+.nav-profile-img {
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	object-fit: cover;
+	margin-left: 0.8rem;
+	border: 2px solid #00e6e6;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+	background: #fff;
+	transition: box-shadow 0.2s;
+}
+.nav-profile-img:hover {
+	box-shadow: 0 4px 16px #00e6e6;
+}
+.nav-links {
+	list-style: none;
+	display: flex;
+	gap: 2rem;
+}
+.nav-links li a {
+	font-size: 1.1rem;
+	transition: color 0.2s;
+}
+.nav-links li a:hover {
+	color: #00e6e6;
+}
+
+.hero-section {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 80vh;
+	background: linear-gradient(120deg, #232526 0%, #414345 100%);
+	text-align: center;
+}
+.hero-content h1 {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+.hero-content h1 span {
+	color: #00e6e6;
+}
+.typed-text {
+	font-size: 1.5rem;
+	color: #00e6e6;
+	min-height: 2.2rem;
+	margin-bottom: 2rem;
+	display: block;
+}
+.btn {
+	display: inline-block;
+	padding: 0.8rem 2rem;
+	background: #00e6e6;
+	color: #181818;
+	border: none;
+	border-radius: 30px;
+	font-size: 1.1rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background 0.2s, color 0.2s;
+	margin-top: 1rem;
+}
+.btn:hover {
+	background: #fff;
+	color: #00e6e6;
+}
+
+.about-section {
+	max-width: 1000px;
+	margin: 4rem auto;
+	padding: 2rem;
+	background: #232526;
+	border-radius: 20px;
+	box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+}
+.about-section h2 {
+	text-align: center;
+	margin-bottom: 2rem;
+	color: #00e6e6;
+}
+.about-content {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+	flex-wrap: wrap;
+}
+.profile-img {
+	width: 160px;
+	height: 160px;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 4px solid #00e6e6;
+	box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+}
+.about-content div {
+	flex: 1;
+}
+.skills {
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+	margin-top: 1rem;
+}
+.skills li {
+	background: #00e6e6;
+	color: #181818;
+	padding: 0.4rem 1rem;
+	border-radius: 20px;
+	font-weight: 500;
+	font-size: 1rem;
+}
+
+.projects-section {
+	max-width: 1200px;
+	margin: 4rem auto;
+	padding: 2rem;
+}
+.projects-section h2 {
+	text-align: center;
+	margin-bottom: 2rem;
+	color: #00e6e6;
+}
+.projects-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+}
+.project-card {
+	background: #232526;
+	border-radius: 18px;
+	box-shadow: 0 2px 16px rgba(0,0,0,0.15);
+	overflow: hidden;
+	transition: transform 0.2s, box-shadow 0.2s;
+	display: flex;
+	flex-direction: column;
+}
+.project-card:hover {
+	transform: translateY(-8px) scale(1.03);
+	box-shadow: 0 8px 32px rgba(0,230,230,0.15);
+}
+.project-card img {
+	width: 100%;
+	height: 180px;
+	object-fit: cover;
+}
+.project-card h3 {
+	margin: 1rem;
+	color: #00e6e6;
+}
+.project-card p {
+	margin: 0 1rem 1rem 1rem;
+	flex: 1;
+}
+.project-card .btn {
+	margin: 1rem;
+	align-self: flex-start;
+}
+
+.contact-section {
+	max-width: 600px;
+	margin: 4rem auto;
+	padding: 2rem;
+	background: #232526;
+	border-radius: 20px;
+	box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+}
+.contact-section h2 {
+	text-align: center;
+	margin-bottom: 2rem;
+	color: #00e6e6;
+}
+.contact-form {
+	display: flex;
+	flex-direction: column;
+	gap: 1.2rem;
+}
+.contact-form input,
+.contact-form textarea {
+	padding: 0.8rem 1rem;
+	border: none;
+	border-radius: 10px;
+	font-size: 1rem;
+	background: #181818;
+	color: #f5f5f5;
+	resize: none;
+}
+.contact-form button {
+	width: fit-content;
+	align-self: flex-end;
+}
+
+footer {
+	text-align: center;
+	padding: 2rem 0 1rem 0;
+	color: #888;
+	background: none;
+	font-size: 1rem;
+}
+
+@media (max-width: 800px) {
+	.about-content {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 1.5rem;
+	}
+	.navbar {
+		flex-direction: column;
+		gap: 1rem;
+		padding: 1rem 0.5rem;
+	}
+	.nav-links {
+		gap: 1rem;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.hero-content h1 {
+		font-size: 2rem;
+	}
+	.typed-text {
+		font-size: 1.1rem;
+	}
+	.about-section, .projects-section, .contact-section, .certifications-section, .leetcode-section {
+		padding: 1rem 0.5rem;
+		margin: 2rem 0.5rem;
+		border-radius: 12px;
+	}
+	.projects-grid {
+		grid-template-columns: 1fr;
+		gap: 1.2rem;
+	}
+	.project-card img {
+		height: 150px;
+	}
+	.cert-list {
+		gap: 1rem;
+	}
+	.cert-item {
+		flex-direction: column;
+		gap: 0.7rem;
+		padding: 1rem 0.7rem;
+	}
+	.leetcode-badge {
+		flex-direction: column;
+		gap: 0.7rem;
+		align-items: flex-start;
+	}
+	.profile-img {
+		width: 110px;
+		height: 110px;
+	}
+	.social-links {
+		font-size: 1.4rem;
+		gap: 0.7rem;
+	}
+}
